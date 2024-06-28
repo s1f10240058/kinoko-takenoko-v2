@@ -11,6 +11,7 @@ def top():
 
 @app.route('/vote', methods=['POST'])
 def answer():
+    print(request.form)
     global kinoko_count, takenoko_count, messages
     if request.form.get("item") == 'kinoko':
         kinoko_count += 1
