@@ -20,7 +20,7 @@ def answer():
 
         messages.append(request.form.get("message"))
         if len(messages) > 3:
-            message = message[-3:]
+            messages = message[-3:]
             
     kinoko_percent = kinoko_count / (kinoko_count + takenoko_count) * 100
     takenoko_percent = takenoko_count / (kinoko_count + takenoko_count) * 100
